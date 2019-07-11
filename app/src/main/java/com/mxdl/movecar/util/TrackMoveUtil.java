@@ -187,50 +187,5 @@ public class TrackMoveUtil {
     return null;
   }
 
-  public static List<TraceLocation> getListTraceLocation(String latlonStr) {
-    if (!TextUtils.isEmpty(latlonStr)) {
-      String[] trackArr = latlonStr.split("\\|");
-      if (trackArr != null && trackArr.length > 0) {
-        List<TraceLocation> latLngList = new ArrayList<TraceLocation>();
-        for (int i = 0; i < trackArr.length - 1; i = i + 2) {
-          try {
-            String lat = trackArr[i + 1];
-            String lng = trackArr[i];
-            // Logger.v(TAG,"trackArr index:" + i);
-            // Logger.v(TAG,"trackArr lat:" + lat);
-            // Logger.v(TAG,"trackArr lng:" + lng);
-            if (!TextUtils.isEmpty(lat) && !TextUtils.isEmpty(lng)) {
-              Double dLat = Double.valueOf(lat);
-              Double dLng = Double.valueOf(lng);
-              if (dLat >= -90 && dLat <= 90 && dLng >= -180 && dLng <= 180) {
-                TraceLocation latLng = new TraceLocation();
-                latLng.setLatitude(dLat);
-                latLng.setLongitude(dLng);
-                latLngList.add(latLng);
-              }
-            }
-          } catch (Exception e) {
-            e.printStackTrace();
-          }
-        }
-        return latLngList;
-      }
-    }
-    return null;
-  }
 
-  public static List<TraceLocation> getListTraceLocation(List<LatLng> latlngList) {
-    if (latlngList != null && latlngList.size() > 0) {
-      List<TraceLocation> traceLocationList = new ArrayList<TraceLocation>();
-      for (int i = 0; i < latlngList.size(); i++) {
-        LatLng latLng = latlngList.get(i);
-        TraceLocation traceLocation = new TraceLocation();
-        traceLocation.setLatitude(latLng.latitude);
-        traceLocation.setLongitude(latLng.longitude);
-        traceLocationList.add(traceLocation);
-      }
-      return traceLocationList;
-    }
-    return null;
-  }
 }
