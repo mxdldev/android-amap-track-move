@@ -187,6 +187,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.btn_smooth_move1:
+                if (mMoveCarSmoothThread == null) {
+                    mMoveCarSmoothThread = new MoveCarSmoothThread(this);
+                }
                 startMoreSmoothMove();
                 break;
         }
