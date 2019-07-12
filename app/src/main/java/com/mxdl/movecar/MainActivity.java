@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public MoveCarCustomThread mMoreMoveCarCustomThread;
     private MoveCarSmoothThread mMoveCarSmoothThread;
     int i = 0;
+    int m = 0;
     public interface EventType {
         int MapMove = 0;// 0:地图实时跟随；1：小车停止运动；2：小车运动;3：地图加载成功;4:熄火后地图全览
     }
