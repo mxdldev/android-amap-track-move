@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int d = 0;
     int e = 0;
     int f = 0;
+    int g = 0;
 
     public interface EventType {
         int MapMove = 0;// 0:地图实时跟随；1：小车停止运动；2：小车运动;3：地图加载成功;4:熄火后地图全览
