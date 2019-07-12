@@ -12,14 +12,22 @@
         android:id="@+id/btn_coarse_move"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="开始普通移动"
+        android:text="开始单次普通移动"
         />
+    <Button
+        android:id="@+id/btn_coarse_move1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="模拟多次普通移动"
+        android:layout_below="@+id/btn_coarse_move"
+        />
+
     <Button
         android:id="@+id/btn_smooth_move"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="开始单次平滑移动"
-        android:layout_below="@+id/btn_coarse_move"
+        android:layout_below="@+id/btn_coarse_move1"
         />
     <Button
         android:id="@+id/btn_smooth_move1"
