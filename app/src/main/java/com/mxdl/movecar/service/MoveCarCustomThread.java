@@ -103,7 +103,7 @@ public class MoveCarCustomThread extends Thread {
         float distance = TrackMoveUtil.getDistance(latLngList);
         Log.v(TAG, "move distance:" + distance);
         double mTimeInterval = TrackMoveUtil.getMoveTime(distance, step);// 通过距离,计算轨迹动画时间间隔
-        mTimeInterval = 0;// 每走一步停止10毫秒
+        mTimeInterval = 10;// 每走一步停止10毫秒
         Log.v(TAG, "move mTimeInterval:" + mTimeInterval);
 
         moveing = true;

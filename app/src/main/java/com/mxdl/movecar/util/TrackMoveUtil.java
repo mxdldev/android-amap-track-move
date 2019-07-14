@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <h1>轨迹平滑所需要的工具方法</h1> Date: 2016-10-27 Created by gxl
+ * <h1>轨迹平滑所需要的工具方法</h1> Date: 2016-10-27 Created by mxdl
  */
 public class TrackMoveUtil {
   private static double DISTANCE = 0.0001;
